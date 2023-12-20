@@ -20,7 +20,9 @@ button.addEventListener('click', (event) => {
 
   if (campos[seletor.value] === true) {
     textoDeSaida.innerHTML = 'A validação foi concluída com sucesso!';
+    textoDeSaida.style.color = 'green';
   } else {
     textoDeSaida.innerHTML = 'A validação falhou!';
+    textoDeSaida.style.color = 'red';
   }
 });

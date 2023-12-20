@@ -1,6 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background: url('../imgdev.jpg') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
     padding: 0;
     display: flex;
@@ -8,7 +9,7 @@ body {
     align-items: center;
     height: 100vh;
   }
-  
+    
   .container {
     background-color: #fff;
     border-radius: 8px;
@@ -18,37 +19,4 @@ body {
     text-align: center;
   }
   
-  h1 {
-    color: #333;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  input,
-  select,
-  button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  #answer {
-    margin-top: 20px;
-    color: #555;
-  }
   
