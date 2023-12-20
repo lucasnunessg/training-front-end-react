@@ -18,5 +18,9 @@ button.addEventListener('click', (event) => {
     url: validator.isURL(campoDeTexto.value),
   };
 
-  textoDeSaida.innerHTML = `A validação retornou ${campos[seletor.value]}`;
+  if (campos[seletor.value] === true) {
+    textoDeSaida.innerHTML = 'A validação foi concluída com sucesso!';
+  } else {
+    textoDeSaida.innerHTML = 'A validação falhou!';
+  }
 });
