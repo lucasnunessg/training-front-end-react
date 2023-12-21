@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Point</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Validador de Campos</title>
+  <script type="module" crossorigin src="/assets/index-0_FscNOw.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-XIa3NKVl.css">
 </head>
+
 <body>
-    <main>
-        <h1>Hello, World!</h1>
-        <h2>Prática de promises</h2>
-    </main>
-    <script src="./src/main.js"></script>
+
+    
+          
+            
+    
+
+          
+          Expand Down
+    
+    
+  
+  <div class="container">
+    <h1>Validador de campos</h1>
+    <form>
+      <input type="text" placeholder="Insira aqui o valor" id="value">
+     
+      <select name="campo" id="option">
+        <option value="cpf">CPF</option>
+        <option value="hexColor">Cor Hexadecimal</option>
+        <option value="email">email</option>
+        <option value="uuid">UUID v4</option>
+        <option value="url">url</option>
+      </select>
+      <button id="button">Validar</button>
+    </form>
+    <p id="answer">Digite o valor, escolha a opção e clique em validar</p>
+  </div>
+ 
 </body>
 </html>

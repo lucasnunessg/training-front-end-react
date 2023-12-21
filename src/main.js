@@ -1,47 +1,27 @@
+import validator from 'validator';
+import './style.css';
 
-const { error } = require("console");
+const campoDeTexto = document.querySelector('#value');
+const button = document.querySelector('#button');
+const seletor = document.querySelector('#option');
+const textoDeSaida = document.querySelector('#answer');
+const isUUID = 4;
 
-const generateRandomNumber = () => Math.round(Math.random() * 10);
+button.addEventListener('click', (event) => {
+  event.preventDefault();
+  const campos = {
+    cpf: validator.isTaxID(campoDeTexto.value, 'pt-BR'),
+    hexColor: validator.isHexColor(campoDeTexto.value),
+    email: validator.isEmail(campoDeTexto.value),
+    uuid: validator.isUUID(campoDeTexto.value, isUUID),
+    url: validator.isURL(campoDeTexto.value),
+  };
 
-const resolvedPromise = () =>
-  new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const randomNumber = generateRandomNumber();
-      resolve(randomNumber);
-    }, 1000);
-  });
-
-resolvedPromise().then((response) => {
-  console.log(`O número aleatório gerado é: ${response}`);
-})
-
-const rejectPromise = () =>
-  new Promise ((resolve, reject) => {
-    setTimeout(() => {
-      const randomNumber = generateRandomNumber();
-      reject (new Error(`O número ${randomNumber} é inválido!.`))
-    }, 1000);
-  });
-
-  const randomPromise = () => 
-    new Promise ((resolve, reject) => {
-      setTimeout(() => {
-        const randomNumber = generateRandomNumber();
-        if (randomNumber % 2 === 0) {
-          return resolve(randomNumber);
-
-        } return reject(new Error (`O número ${randomNumber} não pode ser gerado, é ímpar!`))
-    }, 1000);
-  });
-
-  rejectPromise().then((response) => {
-    console.log(`O número aleatório gerado é: ${response}`);
-  }).catch((error) => {
-    console.log(`Rejected promise: ${error.message}`);
-   })
-
-   randomPromise().then(response => {
-    console.log(`O número gerado é: ${response}`);
-   }).catch((error) => {
-    console.log(`Promise rejeitada: ${error.message}`);
-   });
+  if (campos[seletor.value] === true) {
+    textoDeSaida.innerHTML = 'A validação foi concluída com sucesso!';
+    textoDeSaida.style.color = 'green';
+  } else {
+    textoDeSaida.innerHTML = 'A validação falhou!';
+    textoDeSaida.style.color = 'red';
+  }
+});
