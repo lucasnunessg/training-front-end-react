@@ -1,0 +1,60 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 40px;
+}
+
+.roupas {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.produto {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  max-width: 300px;
+  width: 100%;
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.produto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.descricao {
+  padding: 15px;
+}
+
+.descricao p {
+  margin: 10px 0;
+  color: #555;
+}
+
+.preco {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .produto {
+    max-width: 100%;
+  }
+}
