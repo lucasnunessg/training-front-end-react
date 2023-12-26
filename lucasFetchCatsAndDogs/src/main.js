@@ -2,6 +2,7 @@ import './style.css';
 
 const getButtonDog = document.getElementById('randomDog');
 const getButtonCat = document.getElementById('randomCat');
+const getRandomPet = document.getElementById('surprise');
 
 getButtonDog.addEventListener('click', (event) => {
     event.preventDefault();
@@ -29,3 +30,15 @@ getButtonCat.addEventListener('click', (event) => {
     });
 });
 
+getRandomPet.addEventListener('click', (event) => {
+  event.preventDefault();
+  Promise.any([
+    fetch("https://api.thecatapi.com/v1/images/search"),
+    fetch("https://dog.ceo/api/breeds/image/random"),
+  ])
+    .then((res) => res.json())
+    .then((data) => {
+      const petURL = data.message || data[0].url;
+      randomPetImage.src = petURL;
+    });
+});
