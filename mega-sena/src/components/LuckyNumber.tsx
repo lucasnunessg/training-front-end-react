@@ -6,7 +6,7 @@ function LuckyNumber() {
   }
   const [show, showNumbers] = React.useState(false);
   return (
-    <>
+    <React.Fragment>
       <h2 className="subtitle">Seus números da sorte são:</h2>
       {show && (
         <ul>
@@ -18,8 +18,8 @@ function LuckyNumber() {
           <li>{luckyNumber()}</li>
         </ul>
       )}
-      <button onClick={ () => showNumbers(!show) }>Mostrar números</button>
-    </>
+      <button onClick={() => showNumbers(!show)}>Mostrar números</button>
+    </React.Fragment>
   );
 }
 
