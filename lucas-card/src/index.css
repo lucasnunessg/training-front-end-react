@@ -84,7 +84,7 @@ button:focus-visible {
 .skill-item {
   margin: 8px 0;
   padding: 8px;
-  background-color: #f0f0f0;
+  background-color:beige;
   border-radius: 5px;
 }
 
@@ -92,7 +92,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
+  background-color: beige;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   border-radius: 8px;
