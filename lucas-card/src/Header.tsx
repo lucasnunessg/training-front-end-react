@@ -3,6 +3,8 @@ import { calculateAge } from "./utils/age";
 function Header() {
   const birthday = '19/08/1999';
   const age = calculateAge(birthday);
+  console.log(age);
+  
 
   return (
   <header>
