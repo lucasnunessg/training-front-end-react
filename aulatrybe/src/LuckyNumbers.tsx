@@ -7,7 +7,7 @@ function getLuckyNumber() {
     return (
       <>
         <h2 className="subtitle">Seus números da sorte da Mega-Sena são:</h2>
-        {show && (
+        {show ? (
           <ul>
             <li>{getLuckyNumber()}</li>
             <li>{getLuckyNumber()}</li>
@@ -16,6 +16,8 @@ function getLuckyNumber() {
             <li>{getLuckyNumber()}</li>
             <li>{getLuckyNumber()}</li>
           </ul>
+        ) : (
+            <h2> Não há números para você</h2>
         )}
 
         
